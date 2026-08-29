@@ -21,6 +21,7 @@ BASE_URL = "https://cacs.law.msu.ru"
 TIMETABLE_URL = f"{BASE_URL}/time-table/group?type=0"
 TIMEZONE = ZoneInfo("Europe/Moscow")
 ICS_FILENAME = "schedule.ics"
+SETTINGS_KEY = "X-LAW-MSU-SETTINGS"
 
 FACULTY_OPTIONS = {
     "Бакалавриат (основное отделение)": "8",
@@ -43,6 +44,14 @@ def load_settings(path: Path) -> dict[str, str]:
         if not settings.get(key):
             raise TimetableError(f"В settings.json не указано поле '{key}'")
     return settings
+
+
+def settings_fingerprint(settings: dict[str, str]) -> str:
+    return f"{settings['faculty']}|{settings['course']}|{settings['group']}"
+
+
+def group_label_from_settings(settings: dict[str, str]) -> str:
+    return f"{settings['faculty']}-{settings['course']}-{settings['group']}"
 
 
 def fetch_csrf(session: requests.Session) -> str:
@@ -317,17 +326,43 @@ def lesson_to_event(lesson: dict[str, Any], group_label: str) -> Event:
     return event
 
 
+def create_empty_calendar() -> Calendar:
+    calendar = Calendar()
+    calendar.add("prodid", "-//law_msu_timetable_app//RU")
+    calendar.add("version", "2.0")
+    calendar.add("calscale", "GREGORIAN")
+    calendar.add("x-wr-timezone", "Europe/Moscow")
+    return calendar
+
+
 def load_existing_calendar(path: Path) -> Calendar:
     if not path.exists():
-        calendar = Calendar()
-        calendar.add("prodid", "-//law_msu_timetable_app//RU")
-        calendar.add("version", "2.0")
-        calendar.add("calscale", "GREGORIAN")
-        calendar.add("x-wr-timezone", "Europe/Moscow")
-        return calendar
+        return create_empty_calendar()
 
     with path.open("rb") as f:
         return Calendar.from_ical(f.read())
+
+
+def get_calendar_settings_key(calendar: Calendar) -> str | None:
+    value = calendar.get(SETTINGS_KEY)
+    if value:
+        return str(value)
+    return None
+
+
+def calendar_belongs_to_settings(calendar: Calendar, fingerprint: str, group_label: str) -> bool:
+    stored = get_calendar_settings_key(calendar)
+    if stored:
+        return stored == fingerprint
+
+    for component in calendar.walk():
+        if component.name != "VEVENT":
+            continue
+        uid = str(component.get("uid", ""))
+        if uid and not uid.startswith(f"law-msu-{group_label}-"):
+            return False
+
+    return True
 
 
 def event_start_date(component: Any) -> date | None:
@@ -346,16 +381,14 @@ def merge_calendar(
     existing: Calendar,
     new_lessons: list[dict[str, Any]],
     group_label: str,
+    fingerprint: str,
     window_start: date,
     window_end: date,
     retention_cutoff: date,
 ) -> Calendar:
     new_uids = {make_event_uid(lesson, group_label) for lesson in new_lessons}
-    merged = Calendar()
-    merged.add("prodid", "-//law_msu_timetable_app//RU")
-    merged.add("version", "2.0")
-    merged.add("calscale", "GREGORIAN")
-    merged.add("x-wr-timezone", "Europe/Moscow")
+    merged = create_empty_calendar()
+    merged.add(SETTINGS_KEY, fingerprint)
 
     for component in existing.walk():
         if component.name != "VEVENT":
@@ -385,8 +418,7 @@ def write_calendar(calendar: Calendar, path: Path) -> None:
     path.write_bytes(calendar.to_ical())
 
 
-def fetch_and_parse(settings_path: Path) -> tuple[list[dict[str, Any]], str]:
-    settings = load_settings(settings_path)
+def fetch_and_parse(settings: dict[str, str]) -> list[dict[str, Any]]:
     session = requests.Session()
     session.headers.update(
         {
@@ -398,9 +430,7 @@ def fetch_and_parse(settings_path: Path) -> tuple[list[dict[str, Any]], str]:
     csrf = fetch_csrf(session)
     faculty_id, course, group_id = resolve_group_id(session, csrf, settings)
     soup = post_filter(session, csrf, faculty_id, course=course, group_id=group_id)
-    lessons = parse_timetable(soup)
-    group_label = f"{settings['faculty']}-{course}-{settings['group']}"
-    return lessons, group_label
+    return parse_timetable(soup)
 
 
 def main() -> int:
@@ -433,14 +463,27 @@ def main() -> int:
     window_end = today + timedelta(weeks=args.weeks_after)
     retention_cutoff = today - timedelta(days=30 * args.retention_months)
 
-    parsed_lessons, group_label = fetch_and_parse(args.settings)
+    settings = load_settings(args.settings)
+    fingerprint = settings_fingerprint(settings)
+    group_label = group_label_from_settings(settings)
+
+    parsed_lessons = fetch_and_parse(settings)
     lessons = expand_lessons(parsed_lessons, window_start, window_end)
 
     existing = load_existing_calendar(args.output)
+    if not calendar_belongs_to_settings(existing, fingerprint, group_label):
+        stored = get_calendar_settings_key(existing)
+        if stored:
+            print(f"Настройки изменились ({stored} → {fingerprint}), ICS очищен")
+        else:
+            print("Настройки изменились, ICS очищен")
+        existing = create_empty_calendar()
+
     merged = merge_calendar(
         existing,
         lessons,
         group_label,
+        fingerprint,
         window_start,
         window_end,
         retention_cutoff,
