@@ -27,7 +27,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260825T090000
 DTEND;TZID=Europe/Moscow:20260825T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-25-1-[]-
 LOCATION:
@@ -36,7 +36,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260826T090000
 DTEND;TZID=Europe/Moscow:20260826T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-26-1-[]-
 LOCATION:
@@ -45,7 +45,7 @@ BEGIN:VEVENT
 SUMMARY:Конференц-зал\, Собрание[Доп]
 DTSTART;TZID=Europe/Moscow:20260826T130000
 DTEND;TZID=Europe/Moscow:20260826T143000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-26-3-Собрание[Доп]-Конференц-зал
 DESCRIPTION:Романов Станислав Владимирович
@@ -56,7 +56,7 @@ SUMMARY:412Б\, Информационные технологии в юр
  идической деятельности[Лк]
 DTSTART;TZID=Europe/Moscow:20260826T144500
 DTEND;TZID=Europe/Moscow:20260826T161500
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-26-4-Информационные технологии в ю
  ридической деятельности[Лк]-412Б
@@ -67,7 +67,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260827T090000
 DTEND;TZID=Europe/Moscow:20260827T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-27-1-[]-
 LOCATION:
@@ -77,7 +77,7 @@ SUMMARY:412Б\, История государства и права зар
  убежных стран[Лк]
 DTSTART;TZID=Europe/Moscow:20260827T130000
 DTEND;TZID=Europe/Moscow:20260827T143000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-27-3-История государства и права за
  рубежных стран[Лк]-412Б
@@ -88,7 +88,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260828T090000
 DTEND;TZID=Europe/Moscow:20260828T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-28-1-[]-
 LOCATION:
@@ -97,7 +97,7 @@ BEGIN:VEVENT
 SUMMARY:210Б\, Правоохранительные органы[Лк]
 DTSTART;TZID=Europe/Moscow:20260828T144500
 DTEND;TZID=Europe/Moscow:20260828T161500
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-28-4-Правоохранительные органы[Лк]-
  210Б
@@ -108,7 +108,7 @@ BEGIN:VEVENT
 SUMMARY:216Б\, История России[Лк]
 DTSTART;TZID=Europe/Moscow:20260828T163000
 DTEND;TZID=Europe/Moscow:20260828T180000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-28-5-История России[Лк]-216Б
 DESCRIPTION:Калинов Виктор Иванович
@@ -118,7 +118,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260829T090000
 DTEND;TZID=Europe/Moscow:20260829T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-29-1-[]-
 LOCATION:
@@ -128,7 +128,7 @@ SUMMARY:418Б\, История отечественного государ
  ства и права[Лк]
 DTSTART;TZID=Europe/Moscow:20260829T104500
 DTEND;TZID=Europe/Moscow:20260829T121500
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-29-2-История отечественного госуда
  рства и права[Лк]-418Б
@@ -139,7 +139,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260830T090000
 DTEND;TZID=Europe/Moscow:20260830T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-30-1-[]-
 LOCATION:
@@ -148,7 +148,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260831T090000
 DTEND;TZID=Europe/Moscow:20260831T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-08-31-1-[]-
 LOCATION:
@@ -157,7 +157,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260901T090000
 DTEND;TZID=Europe/Moscow:20260901T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-01-1-[]-
 LOCATION:
@@ -166,7 +166,7 @@ BEGIN:VEVENT
 SUMMARY:Конференц-зал\, Собрание[Доп]
 DTSTART;TZID=Europe/Moscow:20260902T130000
 DTEND;TZID=Europe/Moscow:20260902T143000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-02-3-Собрание[Доп]-Конференц-зал
 DESCRIPTION:Романов Станислав Владимирович
@@ -177,7 +177,7 @@ SUMMARY:412Б\, Информационные технологии в юр
  идической деятельности[Лк]
 DTSTART;TZID=Europe/Moscow:20260902T144500
 DTEND;TZID=Europe/Moscow:20260902T161500
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-02-4-Информационные технологии в ю
  ридической деятельности[Лк]-412Б
@@ -189,7 +189,7 @@ SUMMARY:412Б\, История государства и права зар
  убежных стран[Лк]
 DTSTART;TZID=Europe/Moscow:20260903T130000
 DTEND;TZID=Europe/Moscow:20260903T143000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-03-3-История государства и права за
  рубежных стран[Лк]-412Б
@@ -200,7 +200,7 @@ BEGIN:VEVENT
 SUMMARY:210Б\, Правоохранительные органы[Лк]
 DTSTART;TZID=Europe/Moscow:20260904T144500
 DTEND;TZID=Europe/Moscow:20260904T161500
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-04-4-Правоохранительные органы[Лк]-
  210Б
@@ -211,7 +211,7 @@ BEGIN:VEVENT
 SUMMARY:216Б\, История России[Лк]
 DTSTART;TZID=Europe/Moscow:20260904T163000
 DTEND;TZID=Europe/Moscow:20260904T180000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-04-5-История России[Лк]-216Б
 DESCRIPTION:Калинов Виктор Иванович
@@ -222,7 +222,7 @@ SUMMARY:418Б\, История отечественного государ
  ства и права[Лк]
 DTSTART;TZID=Europe/Moscow:20260905T090000
 DTEND;TZID=Europe/Moscow:20260905T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-05-1-История отечественного госуда
  рства и права[Лк]-418Б
@@ -234,7 +234,7 @@ SUMMARY:418Б\, История отечественного государ
  ства и права[Лк]
 DTSTART;TZID=Europe/Moscow:20260905T104500
 DTEND;TZID=Europe/Moscow:20260905T121500
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-05-2-История отечественного госуда
  рства и права[Лк]-418Б
@@ -245,7 +245,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260906T090000
 DTEND;TZID=Europe/Moscow:20260906T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-06-1-[]-
 LOCATION:
@@ -254,7 +254,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260907T090000
 DTEND;TZID=Europe/Moscow:20260907T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-07-1-[]-
 LOCATION:
@@ -263,7 +263,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260908T090000
 DTEND;TZID=Europe/Moscow:20260908T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-08-1-[]-
 LOCATION:
@@ -272,7 +272,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260909T090000
 DTEND;TZID=Europe/Moscow:20260909T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-09-1-[]-
 LOCATION:
@@ -281,7 +281,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260910T090000
 DTEND;TZID=Europe/Moscow:20260910T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-10-1-[]-
 LOCATION:
@@ -290,7 +290,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260911T090000
 DTEND;TZID=Europe/Moscow:20260911T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-11-1-[]-
 LOCATION:
@@ -299,7 +299,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260912T090000
 DTEND;TZID=Europe/Moscow:20260912T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-12-1-[]-
 LOCATION:
@@ -308,7 +308,7 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260913T090000
 DTEND;TZID=Europe/Moscow:20260913T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-13-1-[]-
 LOCATION:
@@ -317,9 +317,18 @@ BEGIN:VEVENT
 SUMMARY:[]
 DTSTART;TZID=Europe/Moscow:20260914T090000
 DTEND;TZID=Europe/Moscow:20260914T103000
-DTSTAMP:20260831T092925Z
+DTSTAMP:20260901T082636Z
 UID:law-msu-Бакалавриат (основное отделение)-1
  -101-2026-09-14-1-[]-
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[]
+DTSTART;TZID=Europe/Moscow:20260915T090000
+DTEND;TZID=Europe/Moscow:20260915T103000
+DTSTAMP:20260901T082636Z
+UID:law-msu-Бакалавриат (основное отделение)-1
+ -101-2026-09-15-1-[]-
 LOCATION:
 END:VEVENT
 END:VCALENDAR
